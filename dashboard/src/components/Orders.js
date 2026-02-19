@@ -7,7 +7,7 @@ const Orders = () => {
 
   useEffect(() => {
     // Make an API call to fetch the orders
-    axios.get("http://localhost:3002/allOrders", {
+    axios.get("https://zerodha-backend-rxkl.onrender.com/allOrders", {
         withCredentials: true 
       })
       .then((res) => {
