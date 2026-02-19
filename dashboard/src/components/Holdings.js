@@ -11,7 +11,9 @@ const Holdings = () => {
 
   useEffect(() => {
     axios
-      .get("/allHoldings")
+      .get("https://zerodha-backend-rxkl.onrender.com/allHoldings", {
+        withCredentials: true,
+      })
       .then((res) => {
         console.log("Holdings:", res.data);
         setAllHoldings(res.data);

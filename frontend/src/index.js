@@ -5,9 +5,6 @@ import {BrowserRouter,Routes,Route} from "react-router-dom"
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
-axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "https://zerodha-backend-rxkl.onrender.com";
-
 
 import HomePage from './landing_page/home/HomePage';
 import AboutPage from './landing_page/about/AboutPage';
