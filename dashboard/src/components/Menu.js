@@ -78,6 +78,15 @@ const Menu = () => {
               <p className={selectedMenu === 5 ? activeMenuClass : menuClass}>Apps</p>
             </Link>
           </li>
+          <li>
+            <Link 
+              style={{ textDecoration: "none" }} 
+              to="http://localhost:3001/" 
+              onClick={() => hadnleMenuClick(6)}
+            >
+              <button className={selectedMenu === 6 ? activeMenuClass : menuClass}>Logout</button>
+            </Link>
+          </li>
         </ul>
         <hr />
         <div className="profile" onClick={handleProfileClick}>

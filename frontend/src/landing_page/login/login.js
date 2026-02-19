@@ -97,6 +97,7 @@ const Login = () => {
           <form onSubmit={handleSubmit}>
             <div>
               <label htmlFor="email">Email</label>
+              <br/>
               <input
                 type="email"
                 name="email"
@@ -107,6 +108,7 @@ const Login = () => {
             </div>
             <div>
               <label htmlFor="password">Password</label>
+              <br/>
               <input
                 type="password"
                 name="password"
