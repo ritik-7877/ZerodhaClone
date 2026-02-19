@@ -81,7 +81,7 @@ const Menu = () => {
           <li>
             <Link 
               style={{ textDecoration: "none" }} 
-              to="http://localhost:3001/" 
+              to="https://zerodhaclone-frontend-jwnb.onrender.com" 
               onClick={() => hadnleMenuClick(6)}
             >
               <button className={selectedMenu === 6 ? activeMenuClass : menuClass}>Logout</button>
