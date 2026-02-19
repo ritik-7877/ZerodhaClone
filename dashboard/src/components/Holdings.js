@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import {VerticalGraph} from "./VerticalGraph.js"
+import { VerticalGraph } from "./VerticalGraph.js"
 
 // import { holdings } from "../data/data";
 import axios from "axios";
@@ -10,10 +10,18 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([])
 
   useEffect(() => {
-    axios.get("https://zerodha-backend-rxkl.onrender.com/allHoldings", { withCredentials: true }).then((res) => (
-      console.log(res.data),
-      setAllHoldings(res.data) 
-    ))
+    axios
+      .get("https://zerodha-backend-rxkl.onrender.com/allHoldings", {
+        withCredentials: true,
+      })
+      .then((res) => {
+        console.log(res.data);
+        setAllHoldings(res.data);
+      })
+      .catch((err) => {
+        console.error("Holdings error:", err.response?.status);
+      });
+
   }, [])
 
   // const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
