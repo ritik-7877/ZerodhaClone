@@ -18,6 +18,7 @@ const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
 
 const app = express()
+app.use(express.json());
 app.use(bodyParser.json());
 app.use(cookieParser()) ;
 app.use(
