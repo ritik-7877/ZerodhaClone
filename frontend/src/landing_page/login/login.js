@@ -60,7 +60,7 @@ const Login = () => {
         handleSuccess("Login successful , Now you can access kite !!");
         login(); // Set login state to true on successful login
         setTimeout(() => {
-          window.location.href = "http://localhost:3000/";
+          window.location.href = "https://zerodhaclone-dashboard-o5hg.onrender.com";
         }, 1000);
       } else {
         handleError(message);
