@@ -11,18 +11,16 @@ const Holdings = () => {
 
   useEffect(() => {
     axios
-      .get("https://zerodha-backend-rxkl.onrender.com/allHoldings", {
-        withCredentials: true,
-      })
+      .get("/allHoldings")
       .then((res) => {
-        console.log(res.data);
+        console.log("Holdings:", res.data);
         setAllHoldings(res.data);
       })
       .catch((err) => {
         console.error("Holdings error:", err.response?.status);
       });
+  }, []);
 
-  }, [])
 
   // const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
